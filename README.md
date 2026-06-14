@@ -49,6 +49,9 @@ Assignment/
 * A unified timestamp column was created.
 * Duplicate records were removed.
 * The processed dataset was saved as processed_data.csv.
+### Dataset Note
+
+The records in the dataset were contained in three separate CSV files, but it was determined through analysis that the data were from the same vehicle. It was decided, therefore, to combine all the files into a single, continuous telemetry stream for vehicle use prior to processing. The streaming pipeline was still achieved implementation-wise with Vehicle ID grouping to accommodate for more than one vehicle, if additional data is provided.
 
 ## How to Run
 

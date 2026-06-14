@@ -40,7 +40,7 @@ query = windowed_df.writeStream \
     .queryName("speed_windows") \
     .outputMode("complete") \
     .start()
-
+# Process available files in the watched directory
 query.processAllAvailable()
 
 ordered_df = spark.sql("""

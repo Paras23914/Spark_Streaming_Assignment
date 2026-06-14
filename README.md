@@ -10,6 +10,8 @@ Scenario A – Autonomous Fleet Telemetry
 ## Dataset
 
 AV GPS Dataset (GitHub)  
+
+## Source
 https://github.com/mehrab-abrar/AV-GPS-Dataset
 
 ## Objective
@@ -37,6 +39,15 @@ Assignment/
 ├── incoming/  
 │   └── processed_data.csv  
 └── README.md  
+
+## Data Preprocessing
+
+* The three AV GPS dataset files were merged into a single dataset.
+* Missing timestamps were removed.
+* Vehicle speed was converted from m/s to km/h.
+* A unified timestamp column was created.
+* Duplicate records were removed.
+* The processed dataset was saved as processed_data.csv.
 
 ## How to Run
 
@@ -87,6 +98,7 @@ State is required for:
 1. Maintaining records within the 1-minute sliding window.
 2. Watermark management for late-arriving events.
 3. Storing previous window averages to compare consecutive windows and detect speed drops.
+The watermark allows Spark to handle late-arriving events and safely remove old state that is no longer needed.
 
 ## Sample Alert Output
 
@@ -101,6 +113,7 @@ Example detected anomalies:
 * Speed drop: 91.15 km/h
 
 Screenshots of alert generation are included with the submission.
+### Alert Output
 <img width="1171" height="418" alt="image" src="https://github.com/user-attachments/assets/ad30fd8b-e926-478a-8e41-2649db29e5d3" />
 
 

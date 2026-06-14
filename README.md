@@ -34,9 +34,9 @@ Assignment/
 ├── stream_job.py  
 ├── AV-GPS-Dataset-1.csv  
 ├── AV-GPS-Dataset-2.csv  
-├── AV-GPS-Dataset-1.csv  
+├── AV-GPS-Dataset-3.csv  
 ├── processed_data.csv  
-├── alert_output.png
+├── alert_output.png  
 ├── incoming/  
 │   └── processed_data.csv  
 └── README.md  
@@ -66,7 +66,8 @@ py -3.12 stream_job.py
 
 ### Step 3: Place CSV File
 
-Copy `processed_data.csv` into the `incoming` folder.
+Copy `processed_data.csv` into the `incoming` folder.  
+Ensure processed_data.csv is placed in the incoming folder before running the streaming job.
 
 ## Streaming Pipeline
 
